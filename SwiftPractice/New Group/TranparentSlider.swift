@@ -15,10 +15,6 @@ extension CustomSlider.SliderConfig
         self.init()
         self.tintColor = self.tintColor.withAlphaComponent(opacity)
     }
-
-    override func barHeight() -> CGFloat {
-        return 50
-    }
 }
 
 class TransparentSlider: CustomSlider

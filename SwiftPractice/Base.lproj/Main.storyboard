@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-Ft-Nt1" customClass="TransparentSlider" customModule="SwiftPractice" customModuleProvider="target">
-                                <rect key="frame" x="13" y="328.5" width="349" height="31"/>
-                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQX-SX-KXv">
+                                <rect key="frame" x="112" y="268.5" width="150" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="vaN-Yy-Lfo">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vaN-Yy-Lfo" secondAttribute="bottom" id="BNF-EZ-UnT"/>
+                                    <constraint firstAttribute="trailing" secondItem="vaN-Yy-Lfo" secondAttribute="trailing" id="cTI-ka-vWN"/>
+                                    <constraint firstAttribute="height" constant="150" id="cYO-iK-uok"/>
+                                    <constraint firstItem="vaN-Yy-Lfo" firstAttribute="leading" secondItem="MQX-SX-KXv" secondAttribute="leading" id="hfN-qr-UXl"/>
+                                    <constraint firstAttribute="width" constant="150" id="hkM-ph-q1a"/>
+                                    <constraint firstItem="vaN-Yy-Lfo" firstAttribute="top" secondItem="MQX-SX-KXv" secondAttribute="top" id="nox-gg-bWo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-qf-LIB">
+                                <rect key="frame" x="159.5" y="597" width="55" height="30"/>
+                                <state key="normal" title="animate"/>
+                                <connections>
+                                    <action selector="animateActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rJ-tV-N2t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PmK-Ft-Nt1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="DCX-PA-5nO"/>
-                            <constraint firstItem="PmK-Ft-Nt1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="O6O-a0-fym"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PmK-Ft-Nt1" secondAttribute="trailing" constant="15" id="aMP-2I-FIM"/>
+                            <constraint firstItem="MQX-SX-KXv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Wz-dJ-9Qr"/>
+                            <constraint firstItem="qeG-qf-LIB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AAz-w8-bwu"/>
+                            <constraint firstItem="MQX-SX-KXv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XyS-2j-r68"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qeG-qf-LIB" secondAttribute="bottom" constant="40" id="y7T-QG-6Em"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animatableView" destination="MQX-SX-KXv" id="Bey-ep-Xc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="103" y="-5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="53" height="47"/>
+    </resources>
 </document>
