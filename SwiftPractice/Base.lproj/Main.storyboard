@@ -38,9 +38,6 @@
                                 <rect key="frame" x="159.5" y="597" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.58840603300000005" green="1" blue="0.16324869789999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="animate"/>
-                                <connections>
-                                    <action selector="animateActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rJ-tV-N2t"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,9 +51,16 @@
                     </view>
                     <connections>
                         <outlet property="animatableView" destination="MQX-SX-KXv" id="Bey-ep-Xc3"/>
+                        <outlet property="optionsAnimator" destination="flv-e0-UJL" id="Cdd-3T-vk9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="flv-e0-UJL" customClass="PullUpOptionsAnimator" customModule="SwiftPractice" customModuleProvider="target">
+                    <connections>
+                        <outlet property="handle" destination="qeG-qf-LIB" id="chn-IY-7tf"/>
+                        <outlet property="placeholder" destination="8bC-Xf-vdC" id="1Wr-as-dmk"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="103" y="-5"/>
         </scene>
