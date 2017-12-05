@@ -33,6 +33,7 @@ class PullUpOptionsAnimator: NSObject {
         table?.delegate = self
         table?.isScrollEnabled = false
         table?.separatorStyle = .none
+        table?.clipsToBounds = false
         table?.register(UINib.init(nibName: String(describing: PullUpTableViewCell.self), bundle: Bundle.main),
                         forCellReuseIdentifier: String(describing: PullUpTableViewCell.self))
         table?.tableFooterView = UIView.init()
