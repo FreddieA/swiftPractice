@@ -69,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				C66EFBD31FD54D9E007E3231 /* PulUpOptionsAnimator */,
-				C66EFBD01FD51368007E3231 /* Extentions */,
 				C69B200D1FB42C3B00B921C5 /* New Group */,
 				C643BC6B1F9F34C8004C8292 /* AppDelegate.swift */,
 				C643BC6D1F9F34C8004C8292 /* ViewController.swift */,
@@ -80,13 +79,6 @@
 				C60BA6C41FAB21F80090F6FA /* Integerable.swift */,
 			);
 			path = SwiftPractice;
-			sourceTree = "<group>";
-		};
-		C66EFBD01FD51368007E3231 /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extentions;
 			sourceTree = "<group>";
 		};
 		C66EFBD31FD54D9E007E3231 /* PulUpOptionsAnimator */ = {
